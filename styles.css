@@ -1,16 +1,16 @@
 /* core content */
 @font-face {
   font-family: 'Sweden-Sans';
-  src: url("../fonts/SwedenSans/SwedenSans_webfonts/swedensans-webfont.eot");
-  src: url("../fonts/SwedenSans/SwedenSans_webfonts/swedensans-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/SwedenSans/SwedenSans_webfonts/swedensans-webfont.woff") format("woff"), url("../fonts/SwedenSans/SwedenSans_webfonts/swedensans-webfont.ttf") format("truetype"), url("../fonts/SwedenSans/SwedenSans_webfonts/swedensans-webfont.svg#On-AirInline") format("svg");
+  src: url("fonts/SwedenSans/SwedenSans_webfonts/swedensans-webfont.eot");
+  src: url("fonts/SwedenSans/SwedenSans_webfonts/swedensans-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/SwedenSans/SwedenSans_webfonts/swedensans-webfont.woff") format("woff"), url("fonts/SwedenSans/SwedenSans_webfonts/swedensans-webfont.ttf") format("truetype"), url("fonts/SwedenSans/SwedenSans_webfonts/swedensans-webfont.svg#On-AirInline") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Sweden-Sans';
-  src: url("../fonts/SwedenSans/SwedenSansBold_webfonts/swedensansbold-webfont.eot");
-  src: url("../fonts/SwedenSans/SwedenSansBold_webfonts/swedensansbold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/SwedenSans/SwedenSansBold_webfonts/swedensansbold-webfont.woff") format("woff"), url("../fonts/SwedenSans/SwedenSansBold_webfonts/swedensansbold-webfont.ttf") format("truetype"), url("../fonts/SwedenSans/SwedenSansBold_webfonts/swedensansbold-webfont.svg#On-AirInline") format("svg");
+  src: url("fonts/SwedenSans/SwedenSansBold_webfonts/swedensansbold-webfont.eot");
+  src: url("fonts/SwedenSans/SwedenSansBold_webfonts/swedensansbold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/SwedenSans/SwedenSansBold_webfonts/swedensansbold-webfont.woff") format("woff"), url("fonts/SwedenSans/SwedenSansBold_webfonts/swedensansbold-webfont.ttf") format("truetype"), url("fonts/SwedenSans/SwedenSansBold_webfonts/swedensansbold-webfont.svg#On-AirInline") format("svg");
   font-weight: bold;
   font-style: normal;
 }
@@ -26,12 +26,33 @@ body {
   font-style: normal;
   line-height: 1.6;
   margin: 0;
-  color: #FFFFFA;
-  background-color: #191923;
+  color: #191923;
+  background-color: #5189E3;
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+#frame {
+  height: 100vh;
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+#lander {
+  width: 100vw;
+  height: 100vh;
+  background-color: aquamarine;
+  scroll-snap-align: start;
+}
+
+#menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: peachpuff;
+  scroll-snap-align: start;
 }
 
 .grid {
@@ -59,16 +80,10 @@ body {
   z-index: 100;
 }
 
-#menu {
-  -ms-grid-column: 10;
-  grid-column: 10;
-  -ms-grid-row: 2;
-  grid-row: 2;
-}
-
 #ground {
   height: 100%;
   width: 100vw;
+  background-image: url("images/mc-floor1.png");
   background-size: contain;
   background-repeat: repeat-x;
   -ms-grid-row: 9;
@@ -163,7 +178,7 @@ h2 {
   font-weight: bold;
   font-style: normal;
   line-height: 1;
-  color: #FFFFFA;
+  color: #191923;
 }
 
 h1 {
@@ -204,15 +219,6 @@ a {
   background: #5D3B9E;
 }
 
-#exp {
-  font-size: 1.5rem;
-  position: relative;
-  -ms-grid-column: 10;
-  grid-column: 10;
-  -ms-grid-row: 8;
-  grid-row: 8;
-}
-
 .caption {
   -ms-grid-column: 8;
   -ms-grid-column-span: 3;
@@ -233,7 +239,7 @@ a {
   grid-row: 4 / 7;
   text-align: right;
   margin-top: -2rem;
-  border-right: 5px solid #FFD800;
+  border-right: 5px solid #D1448B;
   padding-right: 1rem;
 }
 
@@ -318,7 +324,7 @@ h2 {
 }
 
 section:nth-child(2) .text-grid::after {
-  background-image: url("../images/mc-imgA.jpg");
+  background-image: url("images/mc-imgA.jpg");
   background-size: cover;
   -ms-grid-row: 2;
   -ms-grid-row-span: 4;
@@ -332,12 +338,12 @@ section:nth-child(2) h2 {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-left: 1rem;
-  border-bottom: 5px solid #FFD800;
+  border-bottom: 5px solid #D1448B;
   padding-bottom: 1rem;
 }
 
 section:nth-child(3) .text-grid::after {
-  background-image: url("../images/mc-imgB.jpg");
+  background-image: url("images/mc-imgB.jpg");
   background-size: cover;
   -ms-grid-row: 2;
   -ms-grid-row-span: 6;
@@ -355,7 +361,7 @@ section:nth-child(3) h2 {
   grid-row: 6 / -1;
   text-align: right;
   margin-right: 1rem;
-  border-top: 5px solid #FFD800;
+  border-top: 5px solid #D1448B;
   padding-top: 1rem;
 }
 
@@ -370,7 +376,7 @@ section:nth-child(3) .body-text {
 }
 
 section:nth-child(4) .text-grid::after {
-  background-image: url("../images/mc-imgC.jpg");
+  background-image: url("images/mc-imgC.jpg");
   background-size: cover;
   -ms-grid-row: 4;
   -ms-grid-row-span: 4;
@@ -387,7 +393,7 @@ section:nth-child(4) h2 {
   -ms-grid-row: 3;
   -ms-grid-row-span: 2;
   grid-row: 3 / 5;
-  border-bottom: 5px solid #FFD800;
+  border-bottom: 5px solid #D1448B;
   margin-bottom: -1rem;
 }
 
@@ -401,7 +407,7 @@ section:nth-child(4) .body-text {
 }
 
 section:nth-child(5) .text-grid::after {
-  background-image: url("../images/mc-imgD.jpg");
+  background-image: url("images/mc-imgD.jpg");
   background-size: cover;
   -ms-grid-row: 3;
   -ms-grid-row-span: 5;
@@ -419,7 +425,7 @@ section:nth-child(5) h2 {
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
   text-align: right;
-  border-bottom: 5px solid #FFD800;
+  border-bottom: 5px solid #D1448B;
   margin-bottom: -1rem;
   padding-bottom: 1rem;
 }
@@ -432,4 +438,95 @@ section:nth-child(5) .body-text {
   -ms-grid-row-span: 3;
   grid-row: 5 / 8;
 }
-/*# sourceMappingURL=node1-styles.css.map */
+
+#cloud1 {
+  z-index: -15;
+  position: relative;
+  left: 10vw;
+  top: 16vh;
+}
+
+#cloud2 {
+  z-index: 2;
+  position: relative;
+  left: 72vw;
+  top: 40vh;
+}
+
+#cloud3 {
+  z-index: -5;
+  position: relative;
+  left: 10vw;
+  top: 30vh;
+}
+
+#cloud4 {
+  z-index: 5;
+  position: relative;
+  left: 70vw;
+  top: 5vh;
+}
+
+#cloud5 {
+  z-index: 5;
+  position: relative;
+  left: 25vw;
+  top: 1vh;
+}
+
+#cloud6 {
+  z-index: -10;
+  position: relative;
+  left: 0vw;
+  top: 55vh;
+}
+
+#cloud7 {
+  z-index: -50;
+  position: relative;
+  left: 55vw;
+  top: 35vh;
+}
+
+#cloud8 {
+  z-index: -5;
+  position: relative;
+  left: 2.5vw;
+  top: 45vh;
+}
+
+#cloud9 {
+  z-index: 5;
+  position: relative;
+  left: 75vw;
+  top: 20vh;
+}
+
+#cloud10 {
+  z-index: 5;
+  position: relative;
+  left: 40vw;
+  top: 5vh;
+}
+
+#cloud11 {
+  z-index: 2;
+  position: relative;
+  left: 47vw;
+  top: 50vh;
+}
+
+#cloud12 {
+  z-index: 5;
+  position: relative;
+  left: -2.5vw;
+  top: 20vh;
+}
+
+#cloud13 {
+  z-index: -5;
+  position: relative;
+  left: 60vw;
+  top: 5vh;
+}
+/*# sourceMappingURL=styles.css.map */
