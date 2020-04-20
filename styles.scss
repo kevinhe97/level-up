@@ -36,6 +36,7 @@ body {
 	margin: 0;
 	color: #191923;
 	background-color: #5189E3;
+	overscroll-behavior: none;
 }
 
 ::-webkit-scrollbar {
@@ -147,11 +148,11 @@ a{
 }
 
 .caption {
-	grid-column: 4 / 7;
+	grid-column: 5 / 8;
 	grid-row: 8;
 	font-weight: normal;
-	font-size: 1rem;
-	text-align: right;
+	font-size: 1.105rem;
+	text-align: center;
 }
 
 .title1 {
@@ -239,7 +240,7 @@ section {
 	&:nth-child(4) {
 		.text-grid {
 			&::after {
-				background-image: url("images/mc-imgA.jpg");
+				background-image: url("images/mc-img1A.jpg");
 				background-size: cover;
 				grid-area: 2 / 6 / 6 / 11;
 				margin: 2rem;
@@ -256,11 +257,11 @@ section {
 	&:nth-child(5) {
 		.text-grid {
 			&::after {
-				background-image: url("images/mc-imgB.jpg");
+				background-image: url("images/mc-img1B.jpg");
 				background-size: cover;
-				grid-area: 2 / 4 / 8 / 9;
+				grid-area: 5 / 4 / 8 / 9;
 				margin-left: -5rem;
-				margin-right: 5rem;
+				margin-right: 7.5rem;
 			}
 		}
 		h2 {
@@ -272,8 +273,9 @@ section {
 			padding-top: 1rem;
 		}
 		.body-text {
-			grid-column: 3 / 5;
-			grid-row: 4 / 6;
+			grid-column: 3 / 6;
+			grid-row: 3 / 6;
+			margin-top: 3rem;
 			margin-right: 1rem;
 		}
 	}
@@ -281,7 +283,7 @@ section {
 	&:nth-child(6) {
 		.text-grid {
 			&::after {
-				background-image: url("images/mc-imgC.jpg");
+				background-image: url("images/mc-img1C.jpg");
 				background-size: cover;
 				grid-area: 4 / 6 / 8 / 11;
 				margin: 2rem;
@@ -290,8 +292,9 @@ section {
 		h2 {
 			grid-column: 3 / 7;
 			grid-row: 3 / 5;
+			align-self: end;
 			border-bottom: 5px solid #D1448B;
-			margin-bottom: -1rem;
+			padding-bottom: 1rem;
 		}
 		.body-text {
 			grid-column: 4 / 6;
@@ -304,8 +307,6 @@ section {
 	&:nth-child(7) {
 		.text-grid {
 			&::after {
-				background-image: url("images/mc-imgD.jpg");
-				background-size: cover;
 				grid-area: 3 / 2 / 8 / 7;
 				margin: 2rem;
 			}
@@ -377,6 +378,7 @@ section {
 	scroll-snap-align: start;
 }
 
+
 /* clouds */
 
 .cloud {
@@ -437,9 +439,10 @@ section {
 	left: 70vw;
 	top: 5vh;
 }
+
 #c5 {
 	z-index: 5;
-	left: 25vw;
+	left: 40vw;
 	top: 1vh;
 }
 #c6 {
@@ -452,9 +455,10 @@ section {
 	left: 55vw;
 	top: 35vh;
 }
+
 #c8 {
 	z-index: -5;
-	left: 2.5vw;
+	left: 1vw;
 	top: 45vh;
 }
 #c9 {
@@ -465,21 +469,6 @@ section {
 #c10 {
 	z-index: 5;
 	left: 40vw;
-	top: 5vh;
-}
-#c11 {
-	z-index: 2;
-	left: 47vw;
-	top: 50vh;
-}
-#cloud12 {
-	z-index: 5;
-	left: -2.5vw;
-	top: 20vh;
-}
-#cloud13 {
-	z-index: -5;
-	left: 60vw;
 	top: 5vh;
 }
   
