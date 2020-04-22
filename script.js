@@ -1,3 +1,5 @@
+// typographic scroll effect
+
 const sections = [...document.querySelectorAll("section")]
 
 let options = {

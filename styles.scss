@@ -91,9 +91,10 @@ section {
 
 /* headings + links */
 
+h1,
 h2,
-p,
-h3 {
+h3,
+p {
 	margin: 0;
 }
 
@@ -114,7 +115,7 @@ h2 {
 	font-size: 3rem;
 }
 
-.header h2 {
+.header h1 {
 	font-size: 2rem;
 	line-height: 1;
 }
@@ -240,7 +241,7 @@ section {
 	&:nth-child(4) {
 		.text-grid {
 			&::after {
-				background-image: url("images/mc-img1A.jpg");
+				background-image: url("images/mc-img1A.png");
 				background-size: cover;
 				grid-area: 2 / 6 / 6 / 11;
 				margin: 2rem;
@@ -257,7 +258,7 @@ section {
 	&:nth-child(5) {
 		.text-grid {
 			&::after {
-				background-image: url("images/mc-img1B.jpg");
+				background-image: url("images/mc-img1B.png");
 				background-size: cover;
 				grid-area: 5 / 4 / 8 / 9;
 				margin-left: -5rem;
@@ -283,7 +284,7 @@ section {
 	&:nth-child(6) {
 		.text-grid {
 			&::after {
-				background-image: url("images/mc-img1C.jpg");
+				background-image: url("images/mc-img1C.png");
 				background-size: cover;
 				grid-area: 4 / 6 / 8 / 11;
 				margin: 2rem;
@@ -357,8 +358,9 @@ section {
 		font-size: 4.5rem;
 		word-spacing: 1rem;
 		color: #FFD800;
-		padding-bottom: 1.5rem;
-		border-bottom: 7.5px solid #5D3B9E;
+		padding-bottom: 1rem;
+		border-bottom: 5px solid #5D3B9E;
+		align-self: end;
 	}
 	
 	.subtitle {

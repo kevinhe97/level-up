@@ -107,9 +107,10 @@ section.is-visible .text-grid > * {
 }
 
 /* headings + links */
+h1,
 h2,
-p,
-h3 {
+h3,
+p {
   margin: 0;
 }
 
@@ -130,7 +131,7 @@ h2 {
   font-size: 3rem;
 }
 
-.header h2 {
+.header h1 {
   font-size: 2rem;
   line-height: 1;
 }
@@ -283,7 +284,7 @@ h3 {
 }
 
 section:nth-child(4) .text-grid::after {
-  background-image: url("images/mc-img1A.jpg");
+  background-image: url("images/mc-img1A.png");
   background-size: cover;
   -ms-grid-row: 2;
   -ms-grid-row-span: 4;
@@ -302,7 +303,7 @@ section:nth-child(4) h3 {
 }
 
 section:nth-child(5) .text-grid::after {
-  background-image: url("images/mc-img1B.jpg");
+  background-image: url("images/mc-img1B.png");
   background-size: cover;
   -ms-grid-row: 5;
   -ms-grid-row-span: 3;
@@ -336,7 +337,7 @@ section:nth-child(5) .body-text {
 }
 
 section:nth-child(6) .text-grid::after {
-  background-image: url("images/mc-img1C.jpg");
+  background-image: url("images/mc-img1C.png");
   background-size: cover;
   -ms-grid-row: 4;
   -ms-grid-row-span: 4;
@@ -441,8 +442,11 @@ section:nth-child(7) .body-text {
   font-size: 4.5rem;
   word-spacing: 1rem;
   color: #FFD800;
-  padding-bottom: 1.5rem;
-  border-bottom: 7.5px solid #5D3B9E;
+  padding-bottom: 1rem;
+  border-bottom: 5px solid #5D3B9E;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 #lander .subtitle {
