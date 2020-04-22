@@ -302,6 +302,9 @@ section {
 		.title1 {
 			grid-column: 2 / 6;
 			grid-row: 4 / 7;
+			margin-top: -2rem;
+			border-right: 5px solid #5D3B9E;
+			padding-right: 1rem;
 		}
 		.title2 {
 			grid-column: 6 / -1;
@@ -322,7 +325,7 @@ section {
 			grid-column: 6 / 10;
 			grid-row: 4 / 5;
 			text-align: right;
-			border-bottom: 5px solid #D1448B;
+			border-bottom: 5px solid #5D3B9E;
 			margin-bottom: -1rem;
 			padding-bottom: 1rem;
 		}
@@ -345,7 +348,7 @@ section {
 		h3 {
 			grid-column: 3 / 7;
 			grid-row: 4 / 5;
-			border-bottom: 5px solid #D1448B;
+			border-bottom: 5px solid #5D3B9E;
 			margin-bottom: -1rem;
 			padding-bottom: 1rem;
 		}
@@ -366,15 +369,104 @@ section {
 		}
 		h3 {
 			grid-column: 7 / 11;
-			grid-row: 4 / 5;
+			grid-row: 3 / 4;
 			text-align: right;
-			border-bottom: 5px solid #D1448B;
+			border-bottom: 5px solid #5D3B9E;
 			margin-bottom: -1rem;
 			padding-bottom: 1rem;
 		}
 		.body-text {
 			grid-column: 8 / 11;
-			grid-row: 6 / 8;
+			grid-row: 5 / 7;
+		}
+	}
+
+	&:nth-child(11) {
+		.text-grid {
+			&::after {
+				grid-area: 3 / 2 / 8 / 7;
+				margin: 2rem;
+			}
+		}
+		.title1 {
+			grid-column: 2 / 6;
+			grid-row: 4 / 7;
+			margin-top: -2rem;
+			border-right: 5px solid #4AD5D8;
+			padding-right: 1rem;
+		}
+		.title2 {
+			grid-column: 6 / -1;
+			grid-row: 4 / -1;
+		}
+	}
+
+	&:nth-child(12) {
+		.text-grid {
+			&::after {
+				grid-area: 3 / 3 / 8 / 8;
+				margin: 2rem;
+				background-image: url("images/mc-img3A.png");
+				background-size: cover;
+			}
+		}
+		h3 {
+			grid-column: 7 / 11;
+			grid-row: 3 / 4;
+			text-align: right;
+			border-bottom: 5px solid #4AD5D8;
+			margin-bottom: -1rem;
+			padding-bottom: 1rem;
+		}
+		.body-text {
+			grid-column: 8 / 11;
+			grid-row: 5 / 7;
+		}
+	}
+
+	&:nth-child(13) {
+		.text-grid {
+			&::after {
+				grid-area: 3 / 3 / 8 / 8;
+				margin: 2rem;
+				background-image: url("images/mc-img3B.png");
+				background-size: cover;
+			}
+		}
+		h3 {
+			grid-column: 7 / 11;
+			grid-row: 3 / 4;
+			text-align: right;
+			border-bottom: 5px solid #4AD5D8;
+			margin-bottom: -1rem;
+			padding-bottom: 1rem;
+		}
+		.body-text {
+			grid-column: 8 / 11;
+			grid-row: 5 / 7;
+		}
+	}
+
+	&:nth-child(14) {
+		.text-grid {
+			&::after {
+				grid-area: 3 / 3 / 8 / 8;
+				margin: 2rem;
+				background-image: url("images/mc-img3C.png");
+				background-size: cover;
+			}
+		}
+		h3 {
+			grid-column: 7 / 11;
+			grid-row: 3 / 4;
+			text-align: right;
+			border-bottom: 5px solid #4AD5D8;
+			margin-bottom: -1rem;
+			padding-bottom: 1rem;
+		}
+		.body-text {
+			grid-column: 8 / 11;
+			grid-row: 5 / 7;
 		}
 	}
 }
