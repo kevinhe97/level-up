@@ -400,11 +400,12 @@ section:nth-child(8) h3 {
 
 section:nth-child(8) .body-text {
   -ms-grid-column: 7;
-  -ms-grid-column-span: 3;
-  grid-column: 7 / 10;
+  -ms-grid-column-span: 4;
+  grid-column: 7 / 11;
   -ms-grid-row: 6;
   -ms-grid-row-span: 2;
   grid-row: 6 / 8;
+  margin-right: 2.5rem;
 }
 
 section:nth-child(9) .text-grid::after {
@@ -440,32 +441,33 @@ section:nth-child(9) .body-text {
 }
 
 section:nth-child(10) .text-grid::after {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 5;
-  grid-area: 2 / 6 / 6 / 11;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 4;
+  grid-area: 3 / 4 / 8 / 8;
   margin: 2rem;
-  background-image: url("images/mc-img2B.png");
+  background-image: url("images/mc-img2C.png");
   background-size: cover;
 }
 
 section:nth-child(10) h3 {
-  -ms-grid-column: 3;
+  -ms-grid-column: 7;
   -ms-grid-column-span: 4;
-  grid-column: 3 / 7;
+  grid-column: 7 / 11;
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4 / 5;
+  text-align: right;
   border-bottom: 5px solid #D1448B;
   margin-bottom: -1rem;
   padding-bottom: 1rem;
 }
 
 section:nth-child(10) .body-text {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 4;
-  grid-column: 4 / 8;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 3;
+  grid-column: 8 / 11;
   -ms-grid-row: 6;
   -ms-grid-row-span: 2;
   grid-row: 6 / 8;

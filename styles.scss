@@ -327,11 +327,12 @@ section {
 			padding-bottom: 1rem;
 		}
 		.body-text {
-			grid-column: 7 / 10;
+			grid-column: 7 / 11;
 			grid-row: 6 / 8;
+			margin-right: 2.5rem;
 		}
 	}
-	
+
 	&:nth-child(9) {
 		.text-grid {
 			&::after {
@@ -357,21 +358,22 @@ section {
 	&:nth-child(10) {
 		.text-grid {
 			&::after {
-				grid-area: 2 / 6 / 6 / 11;
+				grid-area: 3 / 4 / 8 / 8;
 				margin: 2rem;
-				background-image: url("images/mc-img2B.png");
+				background-image: url("images/mc-img2C.png");
 				background-size: cover;
 			}
 		}
 		h3 {
-			grid-column: 3 / 7;
+			grid-column: 7 / 11;
 			grid-row: 4 / 5;
+			text-align: right;
 			border-bottom: 5px solid #D1448B;
 			margin-bottom: -1rem;
 			padding-bottom: 1rem;
 		}
 		.body-text {
-			grid-column: 4 / 8;
+			grid-column: 8 / 11;
 			grid-row: 6 / 8;
 		}
 	}
