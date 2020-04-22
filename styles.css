@@ -443,9 +443,9 @@ section:nth-child(9) .body-text {
 section:nth-child(10) .text-grid::after {
   -ms-grid-row: 3;
   -ms-grid-row-span: 5;
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 4;
-  grid-area: 3 / 4 / 8 / 8;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 5;
+  grid-area: 3 / 3 / 8 / 8;
   margin: 2rem;
   background-image: url("images/mc-img2C.png");
   background-size: cover;

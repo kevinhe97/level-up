@@ -358,7 +358,7 @@ section {
 	&:nth-child(10) {
 		.text-grid {
 			&::after {
-				grid-area: 3 / 4 / 8 / 8;
+				grid-area: 3 / 3 / 8 / 8;
 				margin: 2rem;
 				background-image: url("images/mc-img2C.png");
 				background-size: cover;
