@@ -37,6 +37,7 @@ body {
 	color: #191923;
 	background-color: #5189E3;
 	overscroll-behavior: none;
+	cursor: crosshair;
 }
 
 ::-webkit-scrollbar {
@@ -133,9 +134,9 @@ a{
 .link:after{
     content: '';
     position: absolute;
-    width: 0; height: 4px;
+    width: 0; height: 3.5px;
     display: block;
-    margin-top: 4px;
+    margin-top: 7.5px;
     right: 0;
     background: #5D3B9E;
     transition: width .4s ease-in-out;
@@ -146,14 +147,6 @@ a{
     width: 100%;
     left: 0;
     background: #5D3B9E;
-}
-
-.caption {
-	grid-column: 5 / 8;
-	grid-row: 8;
-	font-weight: normal;
-	font-size: 1.105rem;
-	text-align: center;
 }
 
 .title1 {
@@ -229,12 +222,6 @@ h3 {
 	grid-column: 4 / span 4;
 	grid-row: 6 / 9;
 	z-index: 4;
-}
-
-.dates {
-	font-size: 2rem;
-	grid-column: 3 / 6;
-	grid-row: 5;
 }
 
 section {
@@ -334,6 +321,33 @@ section {
     grid-row: 2;
     align-items: flex-end;
 	z-index: 100;
+	
+}
+
+#nav {
+	grid-column: 5 / 8;
+	grid-row: 2;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	justify-self: center;
+
+	li {
+		float: left;
+		a {
+			text-align: center;
+			margin: 0 1rem;
+			padding: 0 .25rem;
+			align-self: start;
+			z-index: 100;
+			color: #FFD800;
+		}
+	}
+	.link:after{
+		background-color: #FFFFFA;
+		height: 2px;
+		margin-top: 2.5px;
+	}
 }
 
 #ground {
@@ -349,7 +363,7 @@ section {
 #lander {
 	width: 100vw;
 	height: 100vh;
-	z-index: 5;
+	z-index: 1000;
 	scroll-snap-align: start;
 	
 	h1 {
@@ -358,7 +372,7 @@ section {
 		font-size: 4.5rem;
 		word-spacing: 1rem;
 		color: #FFD800;
-		padding-bottom: 1rem;
+		padding-bottom: .5rem;
 		border-bottom: 5px solid #5D3B9E;
 		align-self: end;
 	}
@@ -371,6 +385,13 @@ section {
 		line-height: 2rem;
 	}
 
+	.caption {
+		grid-column: 5 / 8;
+		grid-row: 8;
+		font-weight: normal;
+		font-size: 1.105rem;
+		text-align: center;
+	}
 }
 
 #menu {
@@ -378,6 +399,28 @@ section {
 	height: 100vh;
 	z-index: 5;
 	scroll-snap-align: start;
+
+	a {
+		margin: 0;
+		font-size: 2.5rem;
+		grid-column: 5 / 6;
+		grid-row: 4;
+		align-self: center;
+		z-index: inherit;
+
+		&:nth-child(2){
+			grid-row: 5;
+		}
+		&:nth-child(3){
+			grid-row: 6;
+		}
+	}
+
+	.link:after{
+		background-color: #5D3B9E;
+		height: 5px;
+		margin-top: 5px;
+	}
 }
 
 
