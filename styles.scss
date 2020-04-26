@@ -78,6 +78,7 @@ body {
 	transform-origin: top left;
 }
 
+// acts as the "html" of the horiz. scroller section
 .outer-wrapper {
     width: 100vh;
 	height: 100vw;
@@ -85,7 +86,8 @@ body {
 	grid-row: 1 / 9;
 	display: flex;
     transform: rotate(-90deg) translateX(-100vh);
-    transform-origin: top left;
+	transform-origin: top left;
+	scroll-behavior: smooth;
 	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
     overflow-x: hidden;
@@ -252,6 +254,160 @@ h3 {
 	grid-row: 6 / 9;
 	z-index: 4;
 }
+
+/* fixed frame content */
+
+#home {
+    grid-column: 2 / 9;
+    grid-row: 2;
+    align-items: flex-end;
+	z-index: 100;
+	text-shadow: 1px 1px 15px var(--gunmetal);
+}
+
+#nav {
+	grid-column: 5 / 8;
+	grid-row: 2;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	justify-self: center;
+	text-shadow: 1px 1px 10px var(--gunmetal);
+
+	li {
+		float: left;
+		a {
+			text-align: center;
+			margin: 0 1rem;
+			padding: 0 .25rem;
+			align-self: start;
+			z-index: 100;
+			color: var(--goldenrod);
+		}
+
+		.link:after{
+			background-color: var(--fuschia);
+			height: 2px;
+			margin-top: 2.5px;
+		}
+		&:nth-child(2){
+			.link:after{
+				background-color: var(--violet);
+			}
+		}
+		&:nth-child(3){
+			.link:after{
+				background-color: var(--cerulean);
+			}
+		}
+	}
+}
+
+#ground {
+	height: 100%;
+	width: 100vw;
+	background-image: url("images/mc-floor-grass.png");
+	background-size: contain;
+	background-repeat: repeat-x;
+	grid-row: 9 / 10;
+	z-index: 100;
+}
+
+#question {
+	z-index: 100;
+	position: absolute;
+	right: 5%;
+	top: 5%;
+	color: var(--white);
+	background-color: transparent;
+	font-size: 1.25rem;
+	border: none;
+	align-self: start;
+	cursor: pointer;
+	text-shadow: 2px 2px 8px var(--gunmetal);
+}
+
+#about {
+	z-index: 1000;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--white);
+	display: none;
+}
+
+#lander {
+	width: 100vw;
+	height: 100vh;
+	z-index: 1000;
+	scroll-snap-align: start;
+	
+	h1 {
+		grid-column: 4 / 7;
+		grid-row: 4;
+		font-size: 4.5rem;
+		word-spacing: 1rem;
+		color: var(--white);
+		padding-bottom: .5rem;
+		border-bottom: 5px solid var(--goldenrod);
+		align-self: end;
+	}
+	
+	.subtitle {
+		grid-column: 5 / 8;
+		grid-row: 5;
+		margin-top: 2.5rem;
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+	.caption {
+		grid-column: 5 / 8;
+		grid-row: 8;
+		font-weight: normal;
+		font-size: 1rem;
+		text-align: center;
+		opacity: .75;
+	}
+}
+
+#menu {
+	width: 100vw;
+	height: 100vh;
+	z-index: 5;
+	scroll-snap-align: start;
+
+	div{
+		grid-column: 5 / 6;
+		grid-row: 4;
+		margin: 0;
+		align-self: center;
+		z-index: inherit;
+		
+		a{
+			font-size: 2.5rem;
+		}
+		.link:after{
+			background-color: var(--fuschia);
+			height: 5px;
+			margin-top: -2.5px;
+		}
+		&:nth-child(2){
+			grid-row: 5;
+			.link:after{
+				background-color: var(--violet);
+			}
+		}
+		&:nth-child(3){
+			grid-row: 6;
+			.link:after{
+				background-color: var(--cerulean);
+			}
+		}
+	}
+}
+
+/* section css */
 
 section {
 	&:nth-child(4) {
@@ -551,143 +707,14 @@ section {
 	}
 }
 
-/* fixed frame content */
-
-#home {
-    grid-column: 2 / 9;
-    grid-row: 2;
-    align-items: flex-end;
-	z-index: 100;
-	
-}
-
-#nav {
-	grid-column: 5 / 8;
-	grid-row: 2;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	justify-self: center;
-
-	li {
-		float: left;
-		a {
-			text-align: center;
-			margin: 0 1rem;
-			padding: 0 .25rem;
-			align-self: start;
-			z-index: 100;
-			color: var(--goldenrod);
-		}
-
-		.link:after{
-			background-color: var(--fuschia);
-			height: 2px;
-			margin-top: 2.5px;
-		}
-		&:nth-child(2){
-			.link:after{
-				background-color: var(--violet);
-			}
-		}
-		&:nth-child(3){
-			.link:after{
-				background-color: var(--cerulean);
-			}
-		}
-	}
-}
-
-#ground {
-	height: 100%;
-	width: 100vw;
-	background-image: url("images/mc-floor-grass.png");
-	background-size: contain;
-	background-repeat: repeat-x;
-	grid-row: 9 / 10;
-	z-index: 100;
-}
-
-#lander {
-	width: 100vw;
-	height: 100vh;
-	z-index: 1000;
-	scroll-snap-align: start;
-	
-	h1 {
-		grid-column: 4 / 7;
-		grid-row: 4;
-		font-size: 4.5rem;
-		word-spacing: 1rem;
-		color: var(--white);
-		padding-bottom: .5rem;
-		border-bottom: 5px solid var(--goldenrod);
-		align-self: end;
-	}
-	
-	.subtitle {
-		grid-column: 5 / 8;
-		grid-row: 5;
-		margin-top: 2.5rem;
-		font-size: 1.5rem;
-		line-height: 2rem;
-	}
-
-	.caption {
-		grid-column: 5 / 8;
-		grid-row: 8;
-		font-weight: normal;
-		font-size: 1rem;
-		text-align: center;
-		opacity: .75;
-	}
-}
-
-#menu {
-	width: 100vw;
-	height: 100vh;
-	z-index: 5;
-	scroll-snap-align: start;
-
-	div{
-		grid-column: 5 / 6;
-		grid-row: 4;
-		margin: 0;
-		align-self: center;
-		z-index: inherit;
-		
-		a{
-			font-size: 2.5rem;
-		}
-		.link:after{
-			background-color: var(--fuschia);
-			height: 5px;
-			margin-top: -2.5px;
-		}
-		&:nth-child(2){
-			grid-row: 5;
-			.link:after{
-				background-color: var(--violet);
-			}
-		}
-		&:nth-child(3){
-			grid-row: 6;
-			.link:after{
-				background-color: var(--cerulean);
-			}
-		}
-	}
-}
-
-
 /* clouds */
 
 .cloud {
 	position: relative;
 	background-image: url("cloud.svg");
 	background-repeat: no-repeat;
-	width: 200px;
-	height: 100px;
+	width: 12rem;
+	height: 6rem;
 	z-index: -5;
 	opacity: 0.75;
 }
@@ -739,8 +766,8 @@ section {
 	left: 10vw;
 	top: 30vh;
 
-	width: 400px;
-	height: 200px;
+	width: 24rem;
+	height: 12rem;
 }
 #s1-c4 {
 	z-index: 5;
@@ -771,8 +798,9 @@ section {
 	left: -2vw;
 	top: 45vh;
 	opacity: .85;
-	width: 400px;
-	height: 200px;
+
+	width: 24rem;
+	height: 12rem;
 }
 #s1-c9 {
 	z-index: 5;
@@ -819,11 +847,12 @@ section {
 
 #s2-c6 {
 	z-index: 1;
-	left: 44vw;
-	top: 38vh;
-	opacity: .85;
-	width: 400px;
-	height: 200px;
+	left: 34vw;
+	top: 44vh;
+	opacity: .65;
+
+	width: 24rem;
+	height: 12rem;
 }
 #s2-c7 {
 	z-index: -5;
@@ -842,8 +871,9 @@ section {
 	left: 5vw;
 	top: 24vh;
 	opacity: .75;
-	width: 400px;
-	height: 200px;
+
+	width: 24rem;
+	height: 12rem;
 }
 #s2-c10 {
 	z-index: -1;
@@ -874,8 +904,8 @@ section {
 }
 #s3-c4 {
 	z-index: -1;
-	left: 34vw;
-	top: 19vh;
+	left: 74vw;
+	top: 6vh;
 	opacity: .45;
 }
 #s3-c5 {
@@ -887,12 +917,12 @@ section {
 
 #s3-c6 {
 	z-index: 1;
-	left: 86vw;
+	left: 88vw;
 	top: 51vh;
 	opacity: .75;
 
-	width: 400px;
-	height: 200px;
+	width: 24rem;
+	height: 12rem;
 }
 #s3-c7 {
 	z-index: 1;
@@ -910,7 +940,7 @@ section {
 #s3-c9 {
 	z-index: 1;
 	left: 19vw;
-	top: 11vh;
+	top: 10vh;
 	opacity: .65;
 }
 #s3-c10 {

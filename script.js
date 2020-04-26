@@ -30,3 +30,14 @@ sections.forEach((section, index) => {
 	
   observer.observe(section)
 })
+
+//about menu
+
+
+//section revealer
+
+
+//hover effects
+
+// progress marker
+
