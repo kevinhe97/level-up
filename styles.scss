@@ -369,6 +369,7 @@ h3 {
 			grid-column: 3 / 7;
 			grid-row: 5;
 			font-size: 1.4rem;
+			margin-top: 1.5rem;
 		}
 
 		.subcontent {
@@ -379,6 +380,7 @@ h3 {
 			h4 {
 				grid-column: 8 / 10;
 				grid-row: 3;
+				margin-top: 1.5rem;
 				margin-bottom: 2rem;
 				align-self: end;
 				font-size: 1.5rem;
@@ -433,15 +435,12 @@ h3 {
 	scroll-snap-align: start;
 
 	div {
-		grid-column: 5 / 6;
+		grid-column: 4 / 5;
 		grid-row: 4;
 		margin: 0;
 		align-self: center;
 		z-index: inherit;
-
-		a {
-			font-size: 2.5rem;
-		}
+		font-size: 2.5rem;
 
 		.link:after {
 			background-color: var(--fuschia);
@@ -456,13 +455,27 @@ h3 {
 				background-color: var(--violet);
 			}
 		}
-
 		&:nth-child(3) {
 			grid-row: 6;
 
 			.link:after {
 				background-color: var(--cerulean);
 			}
+		}
+		&:nth-child(4) {
+			grid-row: 4;
+			grid-column: 5 / 11;
+			z-index: -15;
+		}
+		&:nth-child(5) {
+			grid-row: 5;
+			grid-column: 5 / 11;
+			z-index: -15;
+		}
+		&:nth-child(6) {
+			grid-row: 6;
+			grid-column: 5 / 11;
+			z-index: -15;
 		}
 	}
 }

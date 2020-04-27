@@ -424,6 +424,7 @@ h3 {
   -ms-grid-row: 5;
   grid-row: 5;
   font-size: 1.4rem;
+  margin-top: 1.5rem;
 }
 
 #about .grid .subcontent {
@@ -441,6 +442,7 @@ h3 {
   grid-column: 8 / 10;
   -ms-grid-row: 3;
   grid-row: 3;
+  margin-top: 1.5rem;
   margin-bottom: 2rem;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
@@ -506,9 +508,9 @@ h3 {
 }
 
 #menu div {
-  -ms-grid-column: 5;
+  -ms-grid-column: 4;
   -ms-grid-column-span: 1;
-  grid-column: 5 / 6;
+  grid-column: 4 / 5;
   -ms-grid-row: 4;
   grid-row: 4;
   margin: 0;
@@ -516,9 +518,6 @@ h3 {
       -ms-grid-row-align: center;
       align-self: center;
   z-index: inherit;
-}
-
-#menu div a {
   font-size: 2.5rem;
 }
 
@@ -544,6 +543,33 @@ h3 {
 
 #menu div:nth-child(3) .link:after {
   background-color: var(--cerulean);
+}
+
+#menu div:nth-child(4) {
+  -ms-grid-row: 4;
+  grid-row: 4;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 6;
+  grid-column: 5 / 11;
+  z-index: -15;
+}
+
+#menu div:nth-child(5) {
+  -ms-grid-row: 5;
+  grid-row: 5;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 6;
+  grid-column: 5 / 11;
+  z-index: -15;
+}
+
+#menu div:nth-child(6) {
+  -ms-grid-row: 6;
+  grid-row: 6;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 6;
+  grid-column: 5 / 11;
+  z-index: -15;
 }
 
 /* section css */

@@ -44,9 +44,47 @@ $("#leave-nav").on({
   }
 });
 
-//section revealer
-
 //hover effects
+$("#triggerA").on({
+  mouseenter: function() {
+    $("#targetA").animate({
+      paddingLeft: '5%',
+    });
+  },
+  mouseleave: function() {
+    $("#targetA").animate({
+      paddingLeft: '0%'
+    });
+  }
+});
+
+$("#triggerB").on({
+  mouseenter: function() {
+    $("#targetB").animate({
+      paddingLeft: '5%'
+    });
+  },
+  mouseleave: function() {
+    $("#targetB").animate({
+      paddingLeft: '0%'
+    });
+  }
+});
+
+$("#triggerC").on({
+  mouseenter: function() {
+    $("#targetC").animate({
+      paddingLeft: '5%'
+    });
+  },
+  mouseleave: function() {
+    $("#targetC").animate({
+      paddingLeft: '0%'
+    });
+  }
+});
+
+//section revealer
 
 // progress marker
 
