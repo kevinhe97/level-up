@@ -32,10 +32,19 @@ sections.forEach((section, index) => {
 })
 
 //about menu
-
+$("#enter-nav").on({
+  click: function() {
+    $("#about").css("opacity", "1");
+    $("#about").fadeToggle(700);
+  }
+});
+$("#leave-nav").on({
+  click: function() {
+    $("#about").fadeToggle(700);
+  }
+});
 
 //section revealer
-
 
 //hover effects
 
